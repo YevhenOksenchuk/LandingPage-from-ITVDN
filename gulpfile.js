@@ -100,7 +100,7 @@ gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
 gulp.task('watch', function () {
     gulp.watch('src/template/**/*.html', gulp.series('rigger'));
     gulp.watch('src/styles/**/*.scss', gulp.series('styles:compile'));
-   gulp.watch('src/scripts/**/*.js', gulp.series('scripts')); 
+    gulp.watch('src/scripts/**/*.js', gulp.series('scripts')); 
 });
 
 gulp.task('default', gulp.series(

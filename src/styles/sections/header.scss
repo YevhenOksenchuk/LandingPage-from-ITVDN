@@ -1,0 +1,119 @@
+.header {
+    position: relative;
+    min-height: 100px;
+
+    &__bg-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 839px;
+        opacity: 0.6;
+        z-index: -1;
+    }
+
+    &__bg-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__logo {
+        float: left;
+        margin-left: 130px;
+        margin-top: 35px;
+    }
+
+    &__icons-list {
+        position: relative;
+        float: right;
+        margin-right: 90px;
+        margin-top: 35px;
+    }
+
+    &__list-item {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 100px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:first-child {
+            margin-right: 130px;
+        }
+    }
+
+    &__link-list {
+        display: block;
+
+        &:hover {
+            box-shadow: 0 0 20px 1px;
+        }
+    }
+
+    &__link-search {
+        @include sprite($magnifying-glass);
+    }
+
+    &__link-avatar {
+        @include sprite($avatar);
+    }
+
+    &__link-bag {
+        @include sprite($shopping-bag);
+    }
+
+    &__search {
+        position: absolute;
+        visibility: hidden;
+        left: 51%;
+        top: 35px;
+        border: none;
+        box-shadow: 0 0 10px 0px;
+    }
+}
+
+.burger-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 75px;
+    min-height: 760px;
+    background-color: #ece5e1;
+}
+
+.burger {
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    top: 39px;
+    left: 21px;
+    cursor: pointer;
+
+    &__line {
+        position: absolute;
+        height: 2px;
+        background-color: #352f2f;
+
+    }
+
+    &__line-1 {
+        width: 33px;
+        top: 0;
+        left: 0;
+    }
+
+    &__line-2{
+        width: 19px;
+        top: 7px;
+        left: 15px;
+    }
+
+    &__line-3{
+        width: 18px;
+        top: 14px;
+        left: 0;
+    }
+}

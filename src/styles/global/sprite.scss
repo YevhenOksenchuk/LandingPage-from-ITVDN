@@ -1,0 +1,145 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$avatar-name: 'avatar';
+$avatar-x: 65px;
+$avatar-y: 45px;
+$avatar-offset-x: -65px;
+$avatar-offset-y: -45px;
+$avatar-width: 17px;
+$avatar-height: 20px;
+$avatar-total-width: 116px;
+$avatar-total-height: 90px;
+$avatar-image: '../images/sprite.png';
+$avatar: (65px, 45px, -65px, -45px, 17px, 20px, 116px, 90px, '../images/sprite.png', 'avatar', );
+$magnifying-glass-name: 'magnifying-glass';
+$magnifying-glass-x: 45px;
+$magnifying-glass-y: 45px;
+$magnifying-glass-offset-x: -45px;
+$magnifying-glass-offset-y: -45px;
+$magnifying-glass-width: 20px;
+$magnifying-glass-height: 20px;
+$magnifying-glass-total-width: 116px;
+$magnifying-glass-total-height: 90px;
+$magnifying-glass-image: '../images/sprite.png';
+$magnifying-glass: (45px, 45px, -45px, -45px, 20px, 20px, 116px, 90px, '../images/sprite.png', 'magnifying-glass', );
+$mastercard-name: 'mastercard';
+$mastercard-x: 0px;
+$mastercard-y: 0px;
+$mastercard-offset-x: 0px;
+$mastercard-offset-y: 0px;
+$mastercard-width: 71px;
+$mastercard-height: 45px;
+$mastercard-total-width: 116px;
+$mastercard-total-height: 90px;
+$mastercard-image: '../images/sprite.png';
+$mastercard: (0px, 0px, 0px, 0px, 71px, 45px, 116px, 90px, '../images/sprite.png', 'mastercard', );
+$paypal-name: 'paypal';
+$paypal-x: 71px;
+$paypal-y: 0px;
+$paypal-offset-x: -71px;
+$paypal-offset-y: 0px;
+$paypal-width: 45px;
+$paypal-height: 45px;
+$paypal-total-width: 116px;
+$paypal-total-height: 90px;
+$paypal-image: '../images/sprite.png';
+$paypal: (71px, 0px, -71px, 0px, 45px, 45px, 116px, 90px, '../images/sprite.png', 'paypal', );
+$shopping-bag-name: 'shopping-bag';
+$shopping-bag-x: 82px;
+$shopping-bag-y: 45px;
+$shopping-bag-offset-x: -82px;
+$shopping-bag-offset-y: -45px;
+$shopping-bag-width: 17px;
+$shopping-bag-height: 20px;
+$shopping-bag-total-width: 116px;
+$shopping-bag-total-height: 90px;
+$shopping-bag-image: '../images/sprite.png';
+$shopping-bag: (82px, 45px, -82px, -45px, 17px, 20px, 116px, 90px, '../images/sprite.png', 'shopping-bag', );
+$visa-name: 'visa';
+$visa-x: 0px;
+$visa-y: 45px;
+$visa-offset-x: 0px;
+$visa-offset-y: -45px;
+$visa-width: 45px;
+$visa-height: 45px;
+$visa-total-width: 116px;
+$visa-total-height: 90px;
+$visa-image: '../images/sprite.png';
+$visa: (0px, 45px, 0px, -45px, 45px, 45px, 116px, 90px, '../images/sprite.png', 'visa', );
+$spritesheet-width: 116px;
+$spritesheet-height: 90px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($avatar, $magnifying-glass, $mastercard, $paypal, $shopping-bag, $visa, );
+$spritesheet: (116px, 90px, '../images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
