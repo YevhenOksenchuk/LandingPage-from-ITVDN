@@ -82,6 +82,28 @@
     min-width: 75px;
     min-height: 760px;
     background-color: #ece5e1;
+
+    &__text {
+        position: absolute;
+        font-size: 1.286rem;
+        transform: rotate(-90deg);
+        left: -40%;
+        top: 457px;
+        margin: 0;
+        padding: 0;
+        width: max-content;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 94px;
+            height: 2px;
+            left: -100%;
+            letter-spacing: 50;
+            background-color: #6a6261;
+            @include center-y;
+        }
+    }
 }
 
 .burger {
