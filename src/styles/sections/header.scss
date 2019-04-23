@@ -37,7 +37,7 @@
         margin-right: 100px;
 
         &:last-child {
-            margin-right: 0;
+            margin-right: 1px;
         }
 
         &:first-child {
@@ -66,8 +66,8 @@
     }
 
     &__search {
+        display: none;
         position: absolute;
-        visibility: hidden;
         left: 51%;
         top: 35px;
         border: none;
@@ -92,6 +92,7 @@
         margin: 0;
         padding: 0;
         width: max-content;
+        z-index: 10;
 
         &::before {
             content: '';
@@ -102,6 +103,7 @@
             letter-spacing: 50;
             background-color: #6a6261;
             @include center-y;
+            z-index: 10;
         }
     }
 }
@@ -113,6 +115,7 @@
     top: 39px;
     left: 21px;
     cursor: pointer;
+    z-index: 10;
 
     &__line {
         position: absolute;
@@ -127,13 +130,13 @@
         left: 0;
     }
 
-    &__line-2{
+    &__line-2 {
         width: 19px;
         top: 7px;
         left: 15px;
     }
 
-    &__line-3{
+    &__line-3 {
         width: 18px;
         top: 14px;
         left: 0;
