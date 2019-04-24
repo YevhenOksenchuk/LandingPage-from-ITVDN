@@ -1,15 +1,25 @@
 .menu {
     display: flex;
     position: absolute;
-    width: 100%;
+    width: 0;
     top: 0;
     left: 0;
     background-image: url(../images/back-menu.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+    overflow: hidden;
     z-index: 3;
+    transition: .8s;
 
+    &__closebtn {
+        position: absolute;
+        top: 50px;
+        right: 7%;
+        font-size: 3rem;
+        font-family: sans-serif;
+        cursor: pointer;
+    }
 
 
     &__left-side {
@@ -28,10 +38,15 @@
     }
 
     &__list {
+        font-weight: 600;
         padding: 0;
 
         &:first-child {
             padding-left: 25px;
+        }
+
+        &--font {
+            font-weight: 300;
         }
 
     }
@@ -60,5 +75,35 @@
         font-size: 1.714rem;
         padding-left: 25px;
         margin-top: 219px;
+    }
+
+    &__form {
+        position: relative;
+        margin-bottom: 13px;
+    }
+
+    &__form-submit {
+        position: absolute;
+        top: 0;
+        border: none;
+        width: 20px;
+        height: 20px;
+        @include sprite($magnifying-glass);
+        background-color: transparent;
+    }
+
+    &__form-search {
+        width: 285px;
+        font-size: 1.2rem;
+        padding-left: 45px;
+        padding-bottom: 5px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #000;
+
+        &::placeholder {
+            font-size: 1.5rem;
+            color: #000;
+        }
     }
 }

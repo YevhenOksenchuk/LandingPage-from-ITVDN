@@ -64,15 +64,6 @@
     &__link-bag {
         @include sprite($shopping-bag);
     }
-
-    &__search {
-        display: none;
-        position: absolute;
-        left: 51%;
-        top: 35px;
-        border: none;
-        box-shadow: 0 0 10px 0px;
-    }
 }
 
 .burger-side {

@@ -1,4 +1,5 @@
 <section class="menu">
+    <div class="menu__closebtn">X</div>
     <div class="menu__left-side"></div>
 
     <div class="menu__main">
@@ -25,17 +26,23 @@
                     <li class="menu__list-item"><a class="menu__link-item">Возврат</a></li>
                     <li class="menu__list-item"><a class="menu__link-item">Контакты</a></li>
                 </ul>
-                <ul class="menu__list">
+                <ul class="menu__list menu__list--font">
                     <li class="menu__list-item"><a class="menu__link-item">Sale</a></li>
                     <li class="menu__list-item"><a class="menu__link-item">New</a></li>
                     <li class="menu__list-item"><a class="menu__link-item">Looks</a></li>
                     <li class="menu__list-item"><a class="menu__link-item">Блог</a></li>
                     <li class="menu__list-item"><a class="menu__link-item">Streetstyle</a></li>
                 </ul>
-                <ul class="menu__list">
-                    <li class="menu__list-item"><a class="menu__link-item">Войти в личный кабинет</a></li>
-                    <li class="menu__list-item"><a class="menu__link-item">Отзывы</a></li>
-                </ul>
+                <div class="menu__auth menu__list--font">
+                    <form class="menu__form" action="#" method="get" autocomplete="off">
+                        <input class="menu__form-submit" type="submit" value="">
+                        <input class="menu__form-search" type="search" name="search" id="formSearch" placeholder="Найти на сайте">
+                    </form>
+                    <ul class="menu__list menu__list--font">
+                        <li class="menu__list-item"><a class="menu__link-item">Войти в личный кабинет</a></li>
+                        <li class="menu__list-item"><a class="menu__link-item">Отзывы</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
