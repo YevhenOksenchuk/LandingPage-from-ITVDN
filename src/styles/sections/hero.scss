@@ -1,0 +1,35 @@
+.hero {
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__image {
+        margin-top: -20px;
+        margin-right: 90px;
+        width: 50%;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+    }
+
+    &__title {
+        position: relative;
+        font-size: 3.428rem;
+
+        &::after {
+            content: '19';
+            position: absolute;
+            top: -60%;
+            right: 18px;
+            font-size: 12.642rem;
+            color: #f9f7f6;
+            opacity: .3;
+        }
+    }
+}
