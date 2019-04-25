@@ -1,0 +1,32 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include center-y;
+    right: 8%;
+    margin-top: 8%;
+    font-size: 1.625rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 3;
+    z-index: 50;
+
+    &__active {
+        display: block;
+        font-weight: bold;
+        color: #91171d;
+    }
+
+    &__line {
+        width: 2px;
+        height: 94px;
+        margin-left: 49%;
+        background-color: #000000;
+    }
+
+    &__next-pages {
+        font-size: 1rem;
+        color: #000000;
+
+    }
+}
