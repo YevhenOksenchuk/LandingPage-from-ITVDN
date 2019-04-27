@@ -1,0 +1,51 @@
+.about {
+    position: relative;
+    margin-bottom: 178px;
+
+    &__title {
+        margin-bottom: 106px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__wrapper {
+        position: relative;
+        max-width: 500px;
+
+        &--last {
+            padding-top: 441px;
+            margin-left: 33px;
+        }
+    }
+
+    &__wrapper-description {
+        position: absolute;
+        width: 613px;
+        height: 243px;
+        background-color: #f0eae7;
+        opacity: .8;
+        z-index: 3;
+
+        &--position-1 {
+            top: 69px;
+            left: 420px;
+        }
+
+        &--position-2 {
+            right: 420px;
+            bottom: 70px;
+        }
+    }
+
+    &__wrapper-text {
+        font-size: 1.428rem;
+        line-height: 1.3;
+        @include center-xy;
+        width: 85%;
+    }
+
+    
+}
