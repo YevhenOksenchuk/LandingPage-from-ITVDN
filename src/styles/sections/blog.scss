@@ -1,6 +1,6 @@
 .blog {
     position: relative;
-    overflow: hidden;
+    
 
     &__title {
         margin-bottom: 135px;
@@ -23,8 +23,9 @@
 
     &__wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         margin-bottom: 101px;
+        overflow-x: scroll;
 
         &-section {
             max-width: 401px;
