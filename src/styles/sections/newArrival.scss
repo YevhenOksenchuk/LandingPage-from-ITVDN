@@ -18,6 +18,11 @@
         &-link {
             font-size: 1.285rem;
             color: #000000;
+            text-decoration: none;
+
+            &:hover {
+                color: #79100b;
+            }
         }
     }
 
@@ -51,6 +56,9 @@
             @include center-xy;
             background-color: #787272;
         }
+    }
+    &__product-link {
+        text-decoration: none;
     }
 
     &__catalog {

@@ -1,0 +1,143 @@
+.footer {
+    position: relative;
+    font-weight: normal;
+    width: 100%;
+    height: 521px;
+    background: linear-gradient(to right, #decec5 53%, #ece5e1 53%);
+
+    &__container {
+        position: relative;
+        display: flex;
+        min-height: 100%;
+    }
+
+    &__left {
+        display: flex;
+        width: 643px;
+        @include center-y;
+        
+        
+    }
+
+    &__list--margin-left-side {
+        margin-right: 80px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__list {
+        font-size: 1.285rem;
+        line-height: 1.8;
+        padding: 0;
+        
+        &:last-child {
+            margin-top: 2.1rem;
+        }
+
+        &-item {
+            width: max-content;
+            
+            &--bold {
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__link-item {
+        cursor: pointer;
+        color: #000000;
+
+        &:hover {
+            color: #91171d;
+        }
+    }
+
+    &__right {
+        position: absolute;
+        display: flex;
+        top: 20%;
+        left: 57%;
+    }
+
+    &__list-item--mb-2 {
+        margin-bottom: 10px;
+    }
+
+    &__list-item--mb-3 {
+        margin-bottom: 25px;
+    }
+
+    &__list--margin-right-side {
+        margin-right: 50px;
+    }
+
+    &__tel {
+        color: #000000;
+        cursor: pointer;
+        text-decoration: underline;
+
+        &:hover {
+            color: #91171d;
+        }
+    }
+
+    &__social {
+        margin-right: 20px;
+        color: #000000;
+        text-decoration: none;
+
+        &:hover {
+            color: #91171d;
+        }
+    }
+
+    &__email {
+        background: transparent;
+        border: none;
+        padding-top: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #000000;
+    }
+
+    &__pay {
+        min-height: 45px;
+    }
+
+    &__visa {
+        display: inline-block;
+        width: 45px;
+        margin-right: 15px;
+        @include sprite($visa);
+    }
+
+    &__master-card {
+        display: inline-block;
+        width: 71px;
+        margin-right: 15px;
+        @include sprite($mastercard);
+    }
+
+    &__paypal {
+        display: inline-block;
+        width: 45px;
+        @include sprite($paypal);
+    }
+
+    &__pay-link {
+        text-decoration: underline;
+        color: #000000;
+
+        &:hover {
+            color: #91171d;
+        }
+    }
+
+    &__copyright {
+        position: absolute;
+        bottom: 10%;
+        right: 0;
+        font-weight: bold;
+    }
+}
