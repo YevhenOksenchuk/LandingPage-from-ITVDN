@@ -27,4 +27,8 @@
         color: #000000;
 
     }
+
+    @media screen and ($max: $max-tablet) {
+        display: none;
+    }
 }

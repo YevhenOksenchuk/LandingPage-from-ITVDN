@@ -13,6 +13,11 @@
         background-size: cover;
         opacity: 0.6;
         z-index: -1;
+
+        @media screen and (max-width: 1440px) {
+            width: 43%;
+            background-position: 86% -20px;
+        }
     }
 
     &__bg-img {
@@ -24,6 +29,10 @@
         float: left;
         margin-left: 157px;
         margin-top: 35px;
+
+        @media screen and (max-width: 1440px) {
+            margin-left: 104px;
+        }
     }
 
     &__icons-list {
@@ -31,6 +40,10 @@
         float: right;
         margin-right: 80px;
         margin-top: 35px;
+
+        @media screen and (max-width: 1440px) {
+            margin-right: 40px;
+        }
     }
 
     &__list-item {
@@ -39,12 +52,20 @@
         height: 20px;
         margin-right: 100px;
 
+        @media screen and (max-width: 1440px) {
+            margin-right: 90px;
+        }
+
         &:last-child {
             margin-right: 0;
         }
 
         &:first-child {
             margin-right: 126px;
+
+            @media screen and (max-width: 1440px) {
+                margin-right: 86px;
+            }
         }
     }
 
@@ -77,6 +98,10 @@
     min-height: 760px;
     background-color: #ece5e1;
 
+    @media screen and (max-width: 1440px) {
+        min-width: 50px;
+    }
+
     &__text {
         position: absolute;
         font-size: 1.286rem;
@@ -88,6 +113,10 @@
         letter-spacing: 1px;
         width: max-content;
         z-index: 10;
+
+        @media screen and (max-width: 1440px) {
+            left: -95%;
+        }
 
         &::before {
             content: '';
@@ -111,6 +140,10 @@
     left: 21px;
     cursor: pointer;
     z-index: 10;
+
+    @media screen and (max-width: 1440px) {
+        left: 9px;
+    }
 
     &__line {
         position: absolute;

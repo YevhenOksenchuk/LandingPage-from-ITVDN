@@ -1,3 +1,8 @@
+$max-tablet: 1440px;
+$min-tablet: 764px;
+$max: max-width;
+$min: min-width;
+
 @mixin center-x {
     position: absolute;
     left: 50%;
