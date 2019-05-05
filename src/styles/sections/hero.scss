@@ -16,6 +16,17 @@
         margin-right: 95px;
         width: 50%;
 
+        @media screen and (max-width: 1440px) {
+            margin-right: 10%;
+        }
+
+        &--size {
+            @media screen and (max-width: 1440px) {
+                width: 393px;
+                height: 647px;
+            }
+        }
+
         &-text {
             width: 367px;
             height: 104px;
@@ -25,6 +36,10 @@
             opacity: .8;
             font-weight: 500;
             color: #79100b;
+
+            @media screen and (max-width: 1440px) {
+                left: 58%;
+            }
 
             &-product {
                 font-size: 1.714rem;
@@ -73,6 +88,14 @@
         margin-bottom: 0;
         line-height: 1.2;
 
+        @media screen and (max-width: 1440px) {
+            position: absolute;
+            left: 8%;
+            top: 180px;
+            white-space: nowrap;
+            z-index: 1;
+        }
+
         &::after {
             content: '19';
             position: absolute;
@@ -81,12 +104,21 @@
             font-size: 12.642rem;
             color: #dbcfc9;
             opacity: .3;
+
+            @media screen and (max-width: 1440px) {
+                display: none;
+            }
         }
     }
 
     &__catalog {
         font-size: 1.286rem;
         margin-left: 9px;
+
+        @media screen and (max-width: 1440px) {
+            margin-top: 440px;
+            margin-left: 18%;
+        }
 
 
         &-link {
@@ -108,13 +140,21 @@
         text-align: center;
         margin-bottom: -3px;
         margin-left: 5px;
-        letter-spacing: 0.1rem;
+
+        @media screen and (max-width: 1440px) {
+            margin-left: 17%;
+            padding-top: 170px;
+        }
 
         &-link {
             position: relative;
             margin-right: 60px;
             color: #000000;
             text-decoration: none;
+
+            @media screen and (max-width: 1440px) {
+                margin-right: 40px;
+            }
 
 
             &:last-child {
@@ -136,6 +176,9 @@
                 @include center-y;
                 left: 133%;
 
+                @media screen and (max-width: 1440px) {
+                    width: 19px;
+                }
             }
 
             &:last-child::after {
@@ -149,11 +192,19 @@
         margin-right: 90px;
         text-align: end;
 
+        @media screen and (max-width: 1440px) {
+            margin-top: 0;
+        }
+
 
         &-number {
             font-size: 2.571rem;
             color: #952126;
             margin-right: 170px;
+
+            @media screen and (max-width: 1440px) {
+                margin-right: 50px;
+            }
 
             &--color {
                 font-size: 1.714rem;
