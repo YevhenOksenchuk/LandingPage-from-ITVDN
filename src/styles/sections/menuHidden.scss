@@ -6,11 +6,15 @@
     left: 0;
     background-image: url(../images/back-menu.png);
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
+    background-size: cover;
     overflow: hidden;
     z-index: 3;
     transition: .8s;
+
+    @media screen and (max-width: 1440px) {
+        height: 823px;
+        background-position: 2% 0;
+    }
 
     &__closebtn {
         position: absolute;
@@ -43,6 +47,10 @@
 
         &:first-child {
             padding-left: 25px;
+
+            @media screen and (max-width: 1440px) {
+                padding-left: 10%;
+            }
         }
 
         &--font {
@@ -55,9 +63,26 @@
         font-weight: normal;
         font-size: 1.286rem;
         list-style: none;
-        line-height: 2;
+        line-height: 2.8;
         width: max-content;
         margin-right: 150px;
+
+        @media screen and (max-width: 1440px) {
+            margin-right: 80px;
+        }
+        &--tablet-none {
+            @media screen and (max-width: 1440px) {
+                display: none;
+            }
+        }
+
+        &--tablet {
+            @media screen and (max-width: 1440px) {
+                position: absolute;
+                top: 470px;
+                left: 65%;
+            }
+        }
     }
 
     &__link-item {
@@ -69,17 +94,29 @@
             color: red;
             text-decoration: none;
         }
+
+        
     }
 
     &__title {
         font-size: 1.714rem;
         padding-left: 25px;
         margin-top: 219px;
+
+        @media screen and (max-width: 1440px) {
+            padding-left: 10%;
+        }
     }
 
     &__form {
         position: relative;
         margin-bottom: 13px;
+
+        @media screen and (max-width: 1440px) {
+            position: absolute;
+            bottom: 20px;
+            left: 115px;
+        }
     }
 
     &__form-submit {
