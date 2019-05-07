@@ -15,6 +15,13 @@
         position: relative;
         max-width: 500px;
 
+        &-img {
+            @media screen and (max-width: 1440px) {
+                width: 352px;
+                height: 544px;
+            }
+        }
+
         &--last {
             padding-top: 441px;
             margin-left: 33px;
@@ -29,14 +36,27 @@
         opacity: .8;
         z-index: 3;
 
+        @media screen and (max-width: 1440px) {
+            width: 457px;
+            height: 202px;
+        }
+
         &--position-1 {
             top: 69px;
             left: 420px;
+
+            @media screen and (max-width: 1440px) {
+                left: 280px;
+            }
         }
 
         &--position-2 {
             right: 420px;
             bottom: 70px;
+
+             @media screen and (max-width: 1440px) {
+                 right: 280px;
+             }
         }
     }
 
@@ -50,5 +70,5 @@
     .page {
         right: 3%;
     }
-    
+
 }
