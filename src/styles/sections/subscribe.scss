@@ -18,6 +18,11 @@
         left: 51%;
         transform: translate(-50%, -50%);
         background-color: rgba(240, 234, 231, 0.8);
+
+        @media screen and (max-width: 1440px) {
+            width: 556px;
+            height: 336px;
+        }
     }
 
     &__title {
@@ -26,6 +31,11 @@
         margin-top: 71px;
         margin-bottom: 42px;
         color: #91171d;
+
+        @media screen and (max-width: 1440px) {
+            font-size: 2rem;
+            margin-top: 60px;
+        }
     }
 
     &__email-input {

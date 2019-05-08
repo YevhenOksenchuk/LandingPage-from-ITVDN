@@ -23,8 +23,8 @@
 
     &__wrapper {
         display: flex;
-        justify-content: space-around;
         margin-bottom: 70px;
+        margin-right: 15px;
         overflow-x: scroll;
 
         &-section {
@@ -45,6 +45,13 @@
 
         &-description {
             font-size: 1.142rem;
+        }
+
+        &-img {
+            @media screen and (max-width: 1440px) {
+                width: 345px;
+                height: 541px;
+            }
         }
     }
 
