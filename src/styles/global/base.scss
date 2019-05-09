@@ -5,6 +5,10 @@ html {
         font-size: 12px;
     }
 
+    @media screen and (max-width: 763px) {
+        font-size: 10px;
+    }
+
 }
 
 body {
@@ -21,6 +25,10 @@ body {
 
     @media screen and (max-width: 1440px) {
         width: 724px;
+    }
+
+    @media screen and (max-width: 763px) {
+        width: 290px;
     }
 }
 
