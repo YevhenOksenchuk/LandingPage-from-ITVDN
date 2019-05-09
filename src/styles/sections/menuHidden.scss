@@ -16,6 +16,11 @@
         background-position: 2% 0;
     }
 
+    @media screen and (max-width: 763px) {
+        height: 490px;
+        background-position: 20% 0;
+    }
+
     &__closebtn {
         position: absolute;
         top: 50px;
@@ -23,6 +28,10 @@
         font-size: 3rem;
         font-family: sans-serif;
         cursor: pointer;
+
+        @media screen and (max-width: 763px) {
+            top: 5px;
+        }
     }
 
 
@@ -51,6 +60,10 @@
             @media screen and (max-width: 1440px) {
                 padding-left: 10%;
             }
+
+            @media screen and (max-width: 763px) {
+                padding-left: 0;
+            }
         }
 
         &--font {
@@ -70,6 +83,13 @@
         @media screen and (max-width: 1440px) {
             margin-right: 80px;
         }
+
+        @media screen and (max-width: 763px) {
+            line-height: 2.4;
+            font-size: 1.4rem;
+        }
+
+
         &--tablet-none {
             @media screen and (max-width: 1440px) {
                 display: none;
@@ -94,8 +114,6 @@
             color: red;
             text-decoration: none;
         }
-
-        
     }
 
     &__title {
@@ -105,6 +123,18 @@
 
         @media screen and (max-width: 1440px) {
             padding-left: 10%;
+        }
+
+        @media screen and (max-width: 763px) {
+            margin-top: 105px;
+            font-size: 2.3rem;
+            padding-left: 0;
+        }
+    }
+
+    &__auth {
+        @media screen and (max-width: 763px) {
+            display: none;
         }
     }
 
