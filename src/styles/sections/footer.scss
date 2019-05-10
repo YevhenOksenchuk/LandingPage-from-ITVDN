@@ -52,6 +52,12 @@
             &--bold {
                 font-weight: bold;
             }
+
+            &--none {
+                @media screen and (max-width: 763px) {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -106,6 +112,10 @@
         color: #000000;
         text-decoration: none;
 
+        @media screen and (max-width: 763px) {
+            display: block;
+        }
+
         &:hover {
             color: #91171d;
         }
@@ -127,6 +137,10 @@
     &__pay {
         min-height: 45px;
         margin-bottom: 4px;
+
+        @media screen and (max-width: 763px) {
+            display: none;
+        }
     }
 
     &__visa {
@@ -164,5 +178,11 @@
         bottom: 4%;
         right: 0;
         font-weight: bold;
+    }
+
+    &__pay-text {
+        @media screen and (max-width: 763px) {
+            display: none;
+        }
     }
 }

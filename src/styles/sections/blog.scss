@@ -4,6 +4,10 @@
 
     &__title {
         margin-bottom: 135px;
+
+        @media screen and (max-width: 763px) {
+            margin-bottom: 20px;
+        }
     }
 
     &__number {
@@ -26,6 +30,10 @@
         margin-bottom: 70px;
         margin-right: 15px;
         overflow-x: scroll;
+
+        @media screen and (max-width: 763px) {
+            margin-bottom: 30px;
+        }
 
         &-section {
             max-width: 401px;
@@ -51,6 +59,11 @@
             @media screen and (max-width: 1440px) {
                 width: 345px;
                 height: 541px;
+            }
+
+            @media screen and (max-width: 763px) {
+                width: 244px;
+                height: 371px;
             }
         }
     }

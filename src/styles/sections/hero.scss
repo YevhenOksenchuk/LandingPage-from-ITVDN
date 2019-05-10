@@ -1,6 +1,10 @@
 .hero {
     margin-bottom: 151px;
 
+    @media screen and (max-width: 763px) {
+        margin-bottom: 70px;
+    }
+
     &__container {
         display: flex;
         justify-content: space-between;
@@ -111,6 +115,7 @@
 
         @media screen and (max-width: 763px) {
             left: 4%;
+            font-size: 3rem;
             margin-top: 20px;
             white-space: normal;
             width: 200px;

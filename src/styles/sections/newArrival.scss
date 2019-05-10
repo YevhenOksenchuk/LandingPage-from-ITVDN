@@ -2,9 +2,21 @@
     position: relative;
     margin-bottom: 160px;
 
+    @media screen and (max-width: 763px) {
+        margin-bottom: 70px;
+    }
+
+    &__container {
+        position: relative;
+    }
+
     &__title {
         margin-left: 45px;
         word-spacing: 10px;
+
+        @media screen and (max-width: 763px) {
+            margin-left: 0;
+        }
     }
 
     &__list {
@@ -14,7 +26,11 @@
         padding: 0;
         margin-top: 20px;
         margin-bottom: 60px;
-        
+
+        @media screen and (max-width: 763px) {
+            margin-bottom: 16px;
+        }
+
 
         &-item {
             display: inline-block;
@@ -29,7 +45,7 @@
         &-link {
             font-size: 1.285rem;
             color: #000000;
-           
+
             text-decoration: none;
 
             &:hover {
@@ -38,16 +54,43 @@
         }
     }
 
+    &__pagination {
+        display: none;
+
+        @media screen and (max-width: 763px) {
+            display: block;
+            position: absolute;
+            width: 29px;
+            height: 29px;
+            top: 280px;
+            border-radius: 50%;
+            cursor: pointer;
+            @include sprite($prev);
+        }
+    }
+
+    &__next {
+        transform: rotate(180deg);
+        right: 0%;
+    }
+
     &__products {
         display: flex;
         justify-content: center;
         margin-bottom: 60px;
         margin-left: 14px;
         margin-bottom: 68px;
+        transition: .5s;
 
         @media screen and (max-width: 1440px) {
             justify-content: space-between;
             margin-left: 0;
+        }
+
+        @media screen and (max-width: 763px) {
+            width: 244px;
+            margin: 0 auto;
+            margin-bottom: 30px;
         }
     }
 
@@ -57,6 +100,10 @@
         @media screen and (max-width: 1440px) {
             margin-right: 0;
         }
+    }
+
+    &__product {
+        transition: .7s;
     }
 
     &__product-description {
@@ -105,6 +152,7 @@
             }
         }
     }
+
     &__product-link {
         text-decoration: none;
     }
@@ -123,9 +171,23 @@
     }
 
     &__product-img {
-        @media screen and (max-width: 1440px){
+        @media screen and (max-width: 1440px) {
             width: 228px;
             height: 400px;
+        }
+
+        @media screen and (max-width: 763px) {
+            width: 244px;
+            height: 356px;
+        }
+    }
+
+    &__slider {
+        @media screen and (max-width: 763px) {
+            position: relative;
+            margin: 0 auto;
+            width: 244px;
+            overflow: hidden;
         }
     }
 }
