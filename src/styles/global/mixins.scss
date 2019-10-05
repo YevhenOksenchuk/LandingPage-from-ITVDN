@@ -1,7 +1,18 @@
-$max-tablet: 1440px;
-$min-tablet: 764px;
-$max: max-width;
-$min: min-width;
+@mixin montserrat {
+    font-family: 'Montserrat';
+}
+
+@mixin raleway {
+    font-family: 'Raleway';
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin raleway-thin {
+    font-family: 'Raleway';
+    font-weight: 100;
+    font-style: normal;
+}
 
 @mixin center-x {
     position: absolute;

@@ -9,18 +9,18 @@
 
     nextBtn.addEventListener('click', function next() {
         posit = position - 100;
-        
+
         if (posit == -300) {
             posit = 0;
         };
         position = posit;
-        
+
         section.style.transform = `translateX(${posit}%)`;
     });
 
     prevBtn.addEventListener('click', function prev() {
         posit = position + 100;
-        
+
         if (posit == 100) {
             posit = -200;
         };
